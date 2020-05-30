@@ -18,3 +18,22 @@ class Student{
         }
     }
 }
+
+function agesAvg(students){
+    var avg = 0;
+    for (i = 0; i < students.length; i++) {
+        avg += students[i].age;
+    }
+    avg /= students.length;
+    console.log(`${avg}`);
+}
+
+students = [];
+students.push(new Student('lital', 25, 5));
+students.push(new Student('asaf', 28, 3));
+students.push(new Student('maor', 20, 2));
+students.push(new Student('limor', 28, 6));
+students.push(new Student('maya', 23, 4));
+
+agesAvg(students);
+
