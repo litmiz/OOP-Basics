@@ -65,3 +65,58 @@ function printBooks(){
 }
 
 ////////////
+
+// Exercise 3 - College Students
+
+var student1 = {
+    name: 'Lital',
+    tel: 12345678,
+    avgGrade: 90,
+}
+
+var student2 = {
+    name: 'Asaf',
+    tel: 23456789,
+    avgGrade: 100,
+}
+
+var student3 = {
+    name: 'Maor',
+    tel: 34567890,
+    avgGrade: 60,
+}
+
+collegeStu = [student1, student2, student3];
+
+console.log(`The students name with average of more than 80 are:`)
+for (let i = 0; i < collegeStu.length; i++) {
+    if (collegeStu[i].avgGrade >= 80){
+        console.log(collegeStu[i].name);
+    }
+}
+
+////////////
+
+// Exercise 4 - Real Estate Investors
+
+class Apartment{
+    constructor(address, houseNum, buyPrice, rentPrice){
+        this.address = address;
+        this.houseNum = houseNum;
+        this.buyPrice = buyPrice;
+        this.rentPrice = rentPrice;
+    }
+}
+
+function calcYield(apartment){
+    var yield = ((apartment.rentPrice * 12) / apartment.buyPrice) * 100;
+    if (yield >= 5) {
+        console.log(`The yield is ${yield}%. This apartment is worth investing in!`);
+    }
+    else {
+        console.log(`The yield is ${yield}%.`);
+    }
+}
+
+calcYield(new Apartment('Lilach st.', 1, 1000000, 5000));
+calcYield(new Apartment('David st.', 1, 2000000, 4000));
