@@ -1,3 +1,5 @@
+// Exercise 1 - Students
+
 class Student{
     constructor(name, age, studyingDays){
         this.name = name;
@@ -25,7 +27,7 @@ function agesAvg(students){
         avg += students[i].age;
     }
     avg /= students.length;
-    console.log(`${avg}`);
+    console.log(`The average age of all the students is ${avg}.`);
 }
 
 students = [];
@@ -37,3 +39,29 @@ students.push(new Student('maya', 23, 4));
 
 agesAvg(students);
 
+////////////
+
+// Exercise 2 - Library
+
+class Book{
+    constructor(name, bookId, bookPages){
+        this.name = name;
+        this.bookId = bookId;
+        this.bookPages = bookPages;
+    }
+}
+
+books = [];
+
+function addBook(name, bookId, bookPages){
+    books.push(new Book(name, bookId, bookPages));
+}
+
+function printBooks(){
+    console.log(`All books in the library:`);
+    for (i = 0; i < books.length; i++) {
+        console.log(`${books[i].name}, ${books[i].bookId}, ${books[i].bookPages}`);
+    }
+}
+
+////////////

@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOP Basics</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>OOP Exercises</h1>
+    <section id="librarySec">
+        <h2>Exercise 2 - Library</h2>
+        <form id="libraryForm">
+            <input type="text" id="bookName" placeholder="Enter book name...">
+            <input type="number" id="bookId" placeholder="Enter book id...">
+            <input type="number" id="bookPages" placeholder="Enter number of pages...">
+            <button type="button" onclick="addBook(bookName.value, bookId.value, bookPages.value)">Add book</button>
+            <button type="button" onclick="printBooks()">Print book list to the console</button>
+        </form>
+    </section>
     <script src="script.js"></script>
 </body>
+
 </html>
